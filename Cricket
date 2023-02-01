@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+    typedef struct cricketer
+    {
+        char name[25];
+        int age;
+        int num_of_matches;
+        float avg_runs;
+    } cricketer;
+    
+    cricketer arr[3];
+
+    for (int i = 0; i < 3; i++)
+    {
+        char str[15];
+        printf("\nenter name of cricketer: \n");
+        gets(arr[i].name);
+        strcpy(str,arr[i].name);
+        printf("enter age :\n");
+        scanf("%d",&arr[i].age);
+        printf("enter number of matches :\n");
+        scanf("%d",&arr[i].num_of_matches);
+        printf("enter avg runs :\n");
+        scanf("%f",&arr[i].avg_runs);
+    }
+    for (int i = 0; i < 3; i++)
+    {
+       printf("Name: %s\n",arr[i].name);       
+        printf("Age: %d\n",arr[i].age);
+        printf("No of matches %d\n",arr[i].num_of_matches);
+        printf("Average Runs: %f\n",arr[i].avg_runs);
+    }
+}
